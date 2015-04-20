@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Graph Visualizer</title>
+<script src="./visualizer.js"></script>
+<script>
+var graph;
+window.onload=function(){
+    graph=new Graph();
+    document.body.appendChild(graph.div);
+};
+</script>
+</head>
+<body>
+<div id="div_menu" style="position:absolute;z-index:5;">
+    <a href="javascript:graph.addvertex();">Add Vertex</a>
+    <a href="javascript:graph.output();">Output</a>
+</div>
+<br>
+<pre id="pre_output">
+</pre>
+<br>
+</body>
+</html>
