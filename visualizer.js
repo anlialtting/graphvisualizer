@@ -139,27 +139,27 @@ function Graph(){
             vertices.push(new Vertex(
                 vertices.length,
                 new Vector(x,y)
-            ));
+            ))
         }
         for(var i=0;i<ce;i++){
             var v=parseInt(input[0]);input.shift()
             var w=parseInt(input[0]);input.shift()
             var edge=new Edge(
                 vertices[v],vertices[w]
-            );
-            edge.vertex_v.push_edge(edge);
-            edge.vertex_w.push_edge(edge);
-            edges.push(edge);
+            )
+            edge.vertex_v.push_edge(edge)
+            edge.vertex_w.push_edge(edge)
+            edges.push(edge)
         }
-    };
+    }
     this.output=function(){
         var output
         output=''
         output+=vertices.length+' '+edges.length+'\n'
-        vertices.forEach(function(e){
+        vertices.forEach(e=>{
             output+=e.x+' '+e.y+'\n'
         })
-        edges.forEach(function(e){
+        edges.forEach(e=>{
             output+=e.vertex_v.id+' '+e.vertex_w.id+'\n'
         })
         document.getElementById('pre_output').innerHTML=output
