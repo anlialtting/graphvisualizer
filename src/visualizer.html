@@ -1,14 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Graph Visualizer</title>
-<script src="./visualizer.js"></script>
-<script>
-var graph;
+<script type=module>
+import Graph from './Graph.js'
 window.onload=function(){
-    graph=new Graph();
-    document.body.appendChild(graph.div);
+    window.graph=new Graph
+    document.body.appendChild(graph.div)
 };
 </script>
 </head>
